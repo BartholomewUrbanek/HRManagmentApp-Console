@@ -1,0 +1,15 @@
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\HRManagmentApp.csproj.AssemblyReference.cache
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\HRManagmentApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\HRManagmentApp.AssemblyInfoInputs.cache
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\HRManagmentApp.AssemblyInfo.cs
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\HRManagmentApp.csproj.CoreCompileInputs.cache
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Debug\net6.0\HRManagmentApp.exe
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Debug\net6.0\HRManagmentApp.deps.json
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Debug\net6.0\HRManagmentApp.runtimeconfig.json
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Debug\net6.0\HRManagmentApp.dll
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Debug\net6.0\HRManagmentApp.pdb
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\HRManagmentApp.dll
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\refint\HRManagmentApp.dll
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\HRManagmentApp.pdb
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\HRManagmentApp.genruntimeconfig.cache
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\ref\HRManagmentApp.dll
