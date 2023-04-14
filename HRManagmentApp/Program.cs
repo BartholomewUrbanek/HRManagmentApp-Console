@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace HRManagmentApp
 {
@@ -6,17 +8,28 @@ namespace HRManagmentApp
     {
         static void Main(string[] args)
         {
-            Employee employee1 = EmployeeFactory.CreateEmployee(Constants.Position.Accountant, "Jan", "Kowalski",Constants.EmploymentStatus.FullTime );
-            Employee employee2 = EmployeeFactory.CreateEmployee(Constants.Position.Manager, "Mariusz", "Kowalski", Constants.EmploymentStatus.PartTime);
-            Employee employee3 = EmployeeFactory.CreateEmployee(Constants.Position.EssentialEmployee, "Krzysztof", "Kowalski", Constants.EmploymentStatus.Intern);
+            Dictionary<Guid,Employee> employees = new Dictionary<Guid,Employee>();
+            ListOfEmployees test = new ListOfEmployees(employees);
+            Employee employee1 = EmployeeFactory.CreateEmployee("Mariusz", "Kowalski", Constants.Position.Accountant, Constants.EmploymentStatus.FullTime);
+            Employee employee2 = EmployeeFactory.CreateEmployee("Mariusz", "Kowalski", Constants.Position.Accountant, Constants.EmploymentStatus.FullTime);
 
 
-            Employee[] employees = new Employee[] { employee1, employee2, employee3 };
+            test.AddEmployee(employee1);
+            test.AddEmployee(employee2);
+            
 
-            for (int i = 0; i < employees.Length; i++)
-            {
-                Console.WriteLine(employees[i].CalculateSalary());
-            }
+
+            test.SearchEmployee("Kowalski");
+
+            Regex regex = new Regex("^[a-zA-Z]{3,}$");
+            bool isMatch = regex.IsMatch("Ja1n");
+            Console.WriteLine(isMatch);
+
+            Controller controller = new Controller(test);
+            string name1 = "k11";
+            controller.MenuAddEmployee();
+            Console.ReadKey();
+
         }
     }
 }

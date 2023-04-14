@@ -8,13 +8,26 @@ namespace HRManagmentApp
 {
     public class EssentialEmployee: Employee
     {
+        private const double _hourlyRate = 22.5;
+        private const int _workingDays = 20; // Constants used for MVP purposes
+        private const int _fullTimeHours = 8;
         public EssentialEmployee(string firstName, string lastName, Constants.EmploymentStatus employmentStatus, Constants.Position position) : base(firstName, lastName, position)
         {
             this.EmploymentStatus = employmentStatus;
         }
         public override double CalculateSalary()
         {
-            return 10.0;
+            switch (EmploymentStatus)
+            {
+                case Constants.EmploymentStatus.FullTime:
+                    return _hourlyRate * _workingDays * _fullTimeHours;
+                case Constants.EmploymentStatus.PartTime:
+                    return _hourlyRate * _workingDays * _fullTimeHours/2;
+                case Constants.EmploymentStatus.Intern:
+                    return (_hourlyRate*0.75)  * _workingDays * _fullTimeHours/2;
+                default:
+                    throw new ArgumentException("Invalid employment status");
+            }
         }
     }
 }

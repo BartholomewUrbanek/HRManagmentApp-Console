@@ -8,15 +8,25 @@ namespace HRManagmentApp
 {
     public class Accountant : Employee
     {
+        private double _baseSalary = 6000;
         public Accountant(string firstName, string lastName, Constants.EmploymentStatus employmentStatus, Constants.Position position) : base(firstName,lastName, position)
         {
             this.EmploymentStatus = employmentStatus;
         }
         public override double CalculateSalary()
         {
-            return 20.0;
+            switch (EmploymentStatus)
+            {
+                case Constants.EmploymentStatus.FullTime:
+                    return _baseSalary;
+                case Constants.EmploymentStatus.PartTime:
+                    return _baseSalary / 2;
+                case Constants.EmploymentStatus.Intern:
+                    return _baseSalary / 2 * 0.75;
+                default:
+                    throw new ArgumentException("Invalid employment status");
+            }
+
         }
-
-
     }
 }

@@ -12,7 +12,6 @@ namespace HRManagmentApp
         {
             FullTime,
             PartTime,
-            Contract,
             Intern
         }
 

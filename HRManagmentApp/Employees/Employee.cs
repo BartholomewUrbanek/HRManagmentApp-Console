@@ -14,6 +14,7 @@ namespace HRManagmentApp
         public Constants.Position Position { get; set; }
         public Constants.EmploymentStatus EmploymentStatus { get; set; }
 
+
         protected Employee(string firstName, string lastName, Constants.Position position)
         {
             this.Id = Guid.NewGuid();
@@ -22,5 +23,14 @@ namespace HRManagmentApp
             this.Position = position;
         }
         public abstract double CalculateSalary();
+
+        public override string ToString()
+        {
+            return $"{FirstName}" +
+                $"\t{LastName}" +
+                $"\t{Position}" +
+                $"\t{EmploymentStatus}" +
+                $"\t{CalculateSalary()}";
+        }
     }
 }
