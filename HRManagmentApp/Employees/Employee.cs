@@ -15,9 +15,9 @@ namespace HRManagmentApp
         public Constants.EmploymentStatus EmploymentStatus { get; set; }
 
 
-        protected Employee(string firstName, string lastName, Constants.Position position)
+        protected Employee(string firstName, string lastName, Constants.Position position, Guid? guid = null)
         {
-            this.Id = Guid.NewGuid();
+            this.Id = guid ?? Guid.NewGuid();
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Position = position;
@@ -26,11 +26,14 @@ namespace HRManagmentApp
 
         public override string ToString()
         {
-            return $"{FirstName}" +
-                $"\t{LastName}" +
-                $"\t{Position}" +
-                $"\t{EmploymentStatus}" +
-                $"\t{CalculateSalary()}";
+            //return $"{FirstName}" +
+            //    $"\t\t{LastName}" +
+            //    $"\t\t{Position}" +
+            //    $"\t\t{EmploymentStatus}" +
+            //    $"\t{CalculateSalary()}";
+
+           return $"{FirstName,-25}{LastName,-25}{Position,-25}{EmploymentStatus,-25}{CalculateSalary()}";
+
         }
     }
 }

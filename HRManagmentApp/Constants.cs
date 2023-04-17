@@ -18,8 +18,8 @@ namespace HRManagmentApp
         public enum Position
         {
             EssentialEmployee,
-            Accountant,
             Salesman,
+            Accountant,
             Manager
         }
     }

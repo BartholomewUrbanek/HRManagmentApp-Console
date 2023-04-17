@@ -4,55 +4,51 @@ namespace HRManagmentApp
 {
     public class ListOfEmployees
     {
-        public Dictionary<Guid, Employee> EmployeeList;
+        public Dictionary<Guid, Employee> employeeList;
 
         public ListOfEmployees(Dictionary<Guid, Employee> employeeList)
         {
-            this.EmployeeList = employeeList;
+            this.employeeList = employeeList;
         }
 
-        public void AddEmployee(Employee newEmployee)
+        internal void AddEmployee(Employee employee)
         {
-            KeyValuePair<Guid, Employee> existingEmployee = EmployeeList.FirstOrDefault(x => x.Value.FirstName == newEmployee.FirstName
+            employeeList.Add(employee.Id, employee);
+        }
+        public Employee IsEmployeeListed(Employee newEmployee)
+        {
+            KeyValuePair<Guid, Employee> existingEmployee = employeeList.FirstOrDefault(x => x.Value.FirstName == newEmployee.FirstName
                && x.Value.LastName == newEmployee.LastName
                && x.Value.Position == newEmployee.Position
                && x.Value.EmploymentStatus == newEmployee.EmploymentStatus);
-
-            if (existingEmployee.Value != null)
-            {
-                Console.WriteLine($"\n Employee already in the list");
-                Console.WriteLine($"\n {existingEmployee.Key}" +
-                  $"\t{existingEmployee.Value.FirstName}" +
-                  $"\t{existingEmployee.Value.LastName}");
-            }
-                EmployeeList.Add(newEmployee.Id, newEmployee);
-
+            return existingEmployee.Value;
         }
-
-        public List<KeyValuePair<Guid, Employee>> SearchEmployee(string lastName)
+        public List<Employee> SearchEmployee(string searchedValue)
         {
-            var matchingKeys = EmployeeList.Where(kvp => kvp.Value.LastName == lastName).ToList();
-
-            Console.WriteLine("\nList of employees matching criteria:\n");
-            int counter = 1;
-            foreach (KeyValuePair<Guid, Employee> kvp in EmployeeList)
-            {
-                Console.WriteLine($"{counter}\t{kvp.Value.FirstName}\t" +
-                    $"{kvp.Value.LastName}\t" +
-                    $"{kvp.Value.Position}\t" +
-                    $"{kvp.Value.EmploymentStatus}");
-                counter++;
-            }
-            return matchingKeys;
+            var matchingEmployees = employeeList.Where(kvp => kvp.Value.LastName == searchedValue
+            || kvp.Value.Position.ToString() == searchedValue
+            || kvp.Value.EmploymentStatus.ToString() == searchedValue)
+                .Select(kvp => kvp.Value).ToList();
+            return matchingEmployees;
         }
 
-        public void EditEmployee(string lastName)
+        public void EditEmployee(string firstName, string lastName, Constants.Position position, Constants.EmploymentStatus employmentStatus, Guid guid)
         {
-            SearchEmployee(lastName);
-            Console.WriteLine("Which employee you want to edit?");
-
-
-
+            Employee editedEmpolyee = EmployeeFactory.CreateEmployee(firstName, lastName, position, employmentStatus, guid);
+            employeeList[guid] = editedEmpolyee;
         }
+
+        public void DeleteEmployee(Employee employee)
+        {
+            employeeList.Remove(employee.Id);
+        }
+
+        public List<Employee> AllEmployees()
+        {
+            List<Employee> employees = employeeList.Select(x => x.Value).ToList();
+            return employees;
+        }
+
+ 
     }
 }

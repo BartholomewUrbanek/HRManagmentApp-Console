@@ -8,7 +8,7 @@ namespace HRManagmentApp
 {
     public  static class EmployeeFactory
     {
-        public static Employee CreateEmployee(string firstName, string lastName, Constants.Position position, Constants.EmploymentStatus employmentStatus)
+        public static Employee CreateEmployee(string firstName, string lastName, Constants.Position position, Constants.EmploymentStatus employmentStatus, Guid? guid = null )
         {
             switch (position)
             {

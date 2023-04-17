@@ -9,7 +9,7 @@ namespace HRManagmentApp
     public class Accountant : Employee
     {
         private double _baseSalary = 6000;
-        public Accountant(string firstName, string lastName, Constants.EmploymentStatus employmentStatus, Constants.Position position) : base(firstName,lastName, position)
+        public Accountant(string firstName, string lastName, Constants.EmploymentStatus employmentStatus, Constants.Position position, Guid? guid = null) : base(firstName,lastName, position,guid)
         {
             this.EmploymentStatus = employmentStatus;
         }

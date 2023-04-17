@@ -11,7 +11,7 @@ namespace HRManagmentApp
         private const double _hourlyRate = 22.5;
         private const int _workingDays = 20; // Constants used for MVP purposes
         private const int _fullTimeHours = 8;
-        public EssentialEmployee(string firstName, string lastName, Constants.EmploymentStatus employmentStatus, Constants.Position position) : base(firstName, lastName, position)
+        public EssentialEmployee(string firstName, string lastName, Constants.EmploymentStatus employmentStatus, Constants.Position position, Guid? guid = null) : base(firstName, lastName, position,guid)
         {
             this.EmploymentStatus = employmentStatus;
         }

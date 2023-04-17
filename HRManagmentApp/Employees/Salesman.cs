@@ -12,7 +12,7 @@ namespace HRManagmentApp
         private const double _baseSalary = 4500.0;
         private const double _salesStandard = 10000; // Constants used for MVP purposes
         private double salesThisMonth { get; set; }
-        public Salesman(string firstName, string lastName, Constants.EmploymentStatus employmentStatus, Constants.Position position) : base(firstName, lastName, position)
+        public Salesman(string firstName, string lastName, Constants.EmploymentStatus employmentStatus, Constants.Position position, Guid? guid = null) : base(firstName, lastName, position, guid)
         {
             this.EmploymentStatus = employmentStatus;
         }

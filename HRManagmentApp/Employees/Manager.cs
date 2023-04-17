@@ -10,7 +10,7 @@ namespace HRManagmentApp
     {
         private const double _baseSalary = 7500;
         private const double _bonus = 0.10; // Constants used for MVP purposes
-        public Manager(string firstName, string lastName, Constants.EmploymentStatus employmentStatus, Constants.Position position) : base(firstName, lastName,position)
+        public Manager(string firstName, string lastName, Constants.EmploymentStatus employmentStatus, Constants.Position position, Guid? guid = null) : base(firstName, lastName,position,guid)
         {
             this.EmploymentStatus = employmentStatus;
         }
