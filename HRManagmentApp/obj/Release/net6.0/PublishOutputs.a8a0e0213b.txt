@@ -1,0 +1,5 @@
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Release\net6.0\publish\HRManagmentApp.exe
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Release\net6.0\publish\HRManagmentApp.dll
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Release\net6.0\publish\HRManagmentApp.deps.json
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Release\net6.0\publish\HRManagmentApp.runtimeconfig.json
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Release\net6.0\publish\HRManagmentApp.pdb

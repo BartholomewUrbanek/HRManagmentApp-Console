@@ -10,7 +10,7 @@ namespace HRManagmentApp
     {
         public void MenuDisplay()
         {
-            string filePatch = (@$"{Directory.GetCurrentDirectory()}\employyeList.csv");
+            string filePatch = (@$"{Directory.GetCurrentDirectory()}\employeeList.csv");
             FileHandler fileHandler = new FileHandler();
             Dictionary<Guid, Employee> employees = fileHandler.ReadFile(filePatch);
             ListOfEmployees listOfEmployees = new ListOfEmployees(employees);

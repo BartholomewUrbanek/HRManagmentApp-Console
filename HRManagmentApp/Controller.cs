@@ -145,10 +145,14 @@
 
         public void MenuManageEmployees()
         {
-            Console.WriteLine("\nInput employee last name:");
+            Console.WriteLine("\nInput employee last name (note that it is case-sensitive)");
             string lastName = stringChecker.NameCheck(Console.ReadLine());
             var employeesFound = listOfEmployees.SearchEmployee(lastName);
-
+            if (employeesFound.Count < 1)
+            {
+                Console.WriteLine("\n\nThere are no employees matching the given criteria.");
+                return;
+            }
             Console.WriteLine("\n\nList of employees matching criteria:\n");
             Console.WriteLine(header);
             int counter = 1;
@@ -214,7 +218,7 @@
             switch (selectedIndex)
             {
                 case 1:
-                    Console.WriteLine("\n\nInput last name of employee you want to search for:\n");
+                    Console.WriteLine("\n\nInput employee last name (note that it is case-sensitive)\n");
                     string lastName = stringChecker.NameCheck(Console.ReadLine());
                     matchingEmployees = listOfEmployees.SearchEmployee(lastName);
                     break;

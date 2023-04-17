@@ -11,7 +11,7 @@ namespace HRManagmentApp
 {
     internal class StringChecker
     {
-        const string NamePattern = "^[a-zA-Z]{3,}$";
+        const string NamePattern = "^[a-zA-Z]{2,}$";
 
         public string NameCheck(string name)
         {

@@ -28,7 +28,9 @@ namespace HRManagmentApp
             var matchingEmployees = employeeList.Where(kvp => kvp.Value.LastName == searchedValue
             || kvp.Value.Position.ToString() == searchedValue
             || kvp.Value.EmploymentStatus.ToString() == searchedValue)
-                .Select(kvp => kvp.Value).ToList();
+                .OrderBy(kvp => kvp.Value.LastName)
+                .Select(kvp => kvp.Value)
+                .ToList();
             return matchingEmployees;
         }
 
@@ -45,7 +47,9 @@ namespace HRManagmentApp
 
         public List<Employee> AllEmployees()
         {
-            List<Employee> employees = employeeList.Select(x => x.Value).ToList();
+            List<Employee> employees = employeeList.Select(x => x.Value)
+                .OrderBy(kvp => kvp.LastName)
+                .ToList();
             return employees;
         }
 
