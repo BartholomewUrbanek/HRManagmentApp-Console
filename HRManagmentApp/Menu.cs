@@ -59,6 +59,7 @@ namespace HRManagmentApp
                         return;
                     case 6:
                         return;
+                        break;
                     default:
                         return;
 

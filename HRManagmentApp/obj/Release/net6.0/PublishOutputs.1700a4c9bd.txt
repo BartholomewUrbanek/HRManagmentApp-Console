@@ -1,0 +1,6 @@
+C:\Users\Finik\Desktop\tester\employeeList.csv
+C:\Users\Finik\Desktop\tester\HRManagmentApp.exe
+C:\Users\Finik\Desktop\tester\HRManagmentApp.dll
+C:\Users\Finik\Desktop\tester\HRManagmentApp.deps.json
+C:\Users\Finik\Desktop\tester\HRManagmentApp.runtimeconfig.json
+C:\Users\Finik\Desktop\tester\HRManagmentApp.pdb

@@ -5,6 +5,18 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>Resources\hrrr_iYH_icon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="employeeList.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\employeeList.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\hrrr_iYH_icon.ico" />
+  </ItemGroup>
 
 </Project>

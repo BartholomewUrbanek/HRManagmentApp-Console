@@ -148,6 +148,7 @@
             Console.WriteLine("\nInput employee last name (note that it is case-sensitive)");
             string lastName = stringChecker.NameCheck(Console.ReadLine());
             var employeesFound = listOfEmployees.SearchEmployee(lastName);
+
             if (employeesFound.Count < 1)
             {
                 Console.WriteLine("\n\nThere are no employees matching the given criteria.");
@@ -158,6 +159,7 @@
             int counter = 1;
             foreach (Employee employee in employeesFound) 
             {
+                Console.WriteLine(employee.Id);
                 Console.WriteLine($"{counter,-4} {employee.ToString()}");
                 counter++;
             }
@@ -215,6 +217,7 @@
 
             int selectedIndex = ChooseKey(1, 5);
             List<Employee> matchingEmployees = new List<Employee>();
+
             switch (selectedIndex)
             {
                 case 1:

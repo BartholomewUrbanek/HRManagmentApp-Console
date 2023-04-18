@@ -13,13 +13,13 @@ namespace HRManagmentApp
             switch (position)
             {
                 case Constants.Position.EssentialEmployee:
-                    return new EssentialEmployee(firstName, lastName, employmentStatus,position);
+                    return new EssentialEmployee(firstName, lastName, employmentStatus,position,guid);
                 case Constants.Position.Salesman:
-                    return new Salesman(firstName, lastName, employmentStatus, position);
+                    return new Salesman(firstName, lastName, employmentStatus, position,guid);
                 case Constants.Position.Accountant:
-                    return new Accountant(firstName, lastName, employmentStatus,position);
+                    return new Accountant(firstName, lastName, employmentStatus,position,guid);
                 case Constants.Position.Manager:
-                    return new Manager(firstName, lastName, employmentStatus,position);
+                    return new Manager(firstName, lastName, employmentStatus,position,guid);
                 default:
                     throw new ArgumentException("Invalid position");
             }

@@ -1,0 +1,5 @@
+C:\Users\Finik\Desktop\HRManagmentApp.exe
+C:\Users\Finik\Desktop\HRManagmentApp.dll
+C:\Users\Finik\Desktop\HRManagmentApp.deps.json
+C:\Users\Finik\Desktop\HRManagmentApp.runtimeconfig.json
+C:\Users\Finik\Desktop\HRManagmentApp.pdb

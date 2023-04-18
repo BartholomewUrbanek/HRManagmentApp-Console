@@ -13,3 +13,8 @@ C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Release\net
 C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Release\net6.0\HRManagmentApp.pdb
 C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Release\net6.0\HRManagmentApp.genruntimeconfig.cache
 C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Release\net6.0\ref\HRManagmentApp.dll
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Release\net6.0\employeeList.csv
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Release\net6.0\HRManagmentApp.dll.manifest
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Release\net6.0\HRManagmentApp.application
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Release\net6.0\HRManagmentApp.dll.manifest
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Release\net6.0\HRManagmentApp.application

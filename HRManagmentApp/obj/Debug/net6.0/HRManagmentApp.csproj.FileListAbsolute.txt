@@ -13,3 +13,4 @@ C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.
 C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\HRManagmentApp.pdb
 C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\HRManagmentApp.genruntimeconfig.cache
 C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\obj\Debug\net6.0\ref\HRManagmentApp.dll
+C:\Users\Finik\source\uni_projects\HRManagmentApp\HRManagmentApp\bin\Debug\net6.0\Resources\employeeList.csv
