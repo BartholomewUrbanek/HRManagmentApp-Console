@@ -2,13 +2,13 @@
 {
     public class FileHandler
     {
-        public Dictionary<Guid, Employee> ReadFile(string filePatch)
+        public Dictionary<Guid, Employee> ReadFile(string filePath)
         {
             Dictionary<Guid, Employee> employeeList = new Dictionary<Guid, Employee>();
 
-            if (!File.Exists(filePatch)) return employeeList;
+            if (!File.Exists(filePath)) return employeeList;
 
-            StreamReader fileReader = new StreamReader(filePatch);
+            StreamReader fileReader = new StreamReader(filePath);
 
             while (!fileReader.EndOfStream)
             {

@@ -26,14 +26,7 @@ namespace HRManagmentApp
 
         public override string ToString()
         {
-            //return $"{FirstName}" +
-            //    $"\t\t{LastName}" +
-            //    $"\t\t{Position}" +
-            //    $"\t\t{EmploymentStatus}" +
-            //    $"\t{CalculateSalary()}";
-
            return $"{FirstName,-25}{LastName,-25}{Position,-25}{EmploymentStatus,-25}{CalculateSalary()}";
-
         }
     }
 }

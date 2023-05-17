@@ -10,9 +10,10 @@ namespace HRManagmentApp
     {
         public void MenuDisplay()
         {
-            string filePatch = (@$"{Directory.GetCurrentDirectory()}\employeeList.csv");
+            string currentDir = Directory.GetCurrentDirectory();
+            string filePath = Path.Combine(currentDir,"employeeList.csv");
             FileHandler fileHandler = new FileHandler();
-            Dictionary<Guid, Employee> employees = fileHandler.ReadFile(filePatch);
+            Dictionary<Guid, Employee> employees = fileHandler.ReadFile(filePath);
             ListOfEmployees listOfEmployees = new ListOfEmployees(employees);
             Controller controller = new Controller(listOfEmployees);
             DisplayLogo();
@@ -55,11 +56,10 @@ namespace HRManagmentApp
                     case 5:                   
                         Console.Clear();
                         DisplayLogo();
-                        fileHandler.SaveFile(filePatch, employees);
+                        fileHandler.SaveFile(filePath, employees);
                         return;
                     case 6:
                         return;
-                        break;
                     default:
                         return;
 
